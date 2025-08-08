@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2, Sparkles, Moon, Sun } from 'lucide-react';
+import Link from 'next/link';
 
 const fastapi = process.env.NEXT_PUBLIC_FASTAPI;
 
@@ -184,7 +185,7 @@ const ChatInterface = () => {
             <div>
               <h1 className={`text-xl font-semibold ${
                 isDarkMode ? 'text-white' : 'text-slate-800'
-              }`}>AI Agent Chat</h1>
+              }`}>Weather Agent</h1>
               <p className={`text-sm ${
                 isDarkMode ? 'text-slate-400' : 'text-slate-600'
               }`}>Powered by FastAPI</p>
@@ -329,7 +330,7 @@ const ChatInterface = () => {
           <p className={`text-xs mt-2 text-center ${
             isDarkMode ? 'text-slate-400' : 'text-slate-500'
           }`}>
-            Connected to: {fastapi || 'Not configured'}
+            Created by <Link href="https://www.linkedin.com/in/muhammad-uzair-2526732a6/" target='_blank' className='text-blue-700'>Muhammad Uzair</Link>
           </p>
         </div>
       </div>
